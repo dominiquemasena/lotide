@@ -9,10 +9,10 @@ const assertEqual = function(actual, expected) {
 let arr1 = [];
 let arr2 = [];
 function assertArraysEqual(arr1, arr2) {
-  if (arr1.length === arr2.length && arr1.every((value, index) => value === array2[index])) {
-    console.log(`✅✅✅ Assertion Passed: :white_check_mark: ${arr1} === ${arr2}`);
+  if (arr1.length === arr2.length && arr1.every((value, index) => value === arr2[index])) {
+    console.log(`✅✅✅ Assertion Passed: ${arr1} === ${arr2}`);
   } else {
-    console.log(`🛑🛑🛑 Assertion Failed: :octagonal_sign: ${arr1} !== ${arr2}`);
+    console.log(`🛑🛑🛑 Assertion Failed: ${arr1} !== ${arr2}`);
   }
 }
 assertArraysEqual([1, 2, 3], [1, 2, 3]);
