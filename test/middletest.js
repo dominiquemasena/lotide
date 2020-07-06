@@ -1,5 +1,8 @@
-const assertEqual = require('../assertEqual');
-const middle = require('../middle');
+const assert = require('chai').assert;
+const middle   = require('../middle');
 
-
-console.log(middle([1, 2, 3]));
+describe("#middle", () => {
+  it("returns 2 for [1, 2, 3]", () => {
+    assert.strictEqual(middle([1, 2, 3]), 2);
+  });
+});
