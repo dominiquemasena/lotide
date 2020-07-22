@@ -1,44 +1,35 @@
+function assertArraysEqual(array1, array2) {
 
-const assertEqual = function(actual, expected) {
-  if (actual / expected === 1) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+  if (array1.length === array2.length && array1.every((value, index) => value === array2[index])) {
+    console.log(`✅✅✅ Assertion Passed: ${array1} === ${array2}`);
   } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
-
-function assertArraysEqual(arr1, arr2) {
-  let arr1 = [];
-  let arr2 = [];
-  if (arr1.length === arr2.length && arr1.every((value, index) => value === arr2[index])) {
-    console.log(`✅✅✅ Assertion Passed: ${arr1} === ${arr2}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${arr1} !== ${arr2}`);
+    console.log(`🛑🛑🛑 Assertion Failed: ${array1} !== ${array2}`);
   }
 }
 
-function eqArrays(arr1, arr2) {
-  if (arr1.length === arr2.length && arr1.every((value, index) => value === arr2[index])) {
-    return true;
-  } else {
+const eqArrays = function(array1, array2) {
+
+  if (array1.length !== array2.length) {
     return false;
   }
+  for (let i = 0; i < array1.length; i++) {
+    if (array1[i] !== array2[i]) {
+      return false;
+    }
+  }
+  return true; 
 }
 
 
-//write a function "without" 
-//which will an array and return unwanted element.
-// unwanted elements are elements that are the same in (arr1, arr2)
 
-const without = function (arr1, arr2){
-  let filteredNums =[];
-for (let i = 0; i < arr1.length; i++) {
-  if (!arr2.includes(arr1[i])){
-    filteredNums.push(arr1[i])
+const without = function (array1, array2){
+  let withoutNums =[];
+for (let i = 0; i < array1.length; i++) {
+  if (!array2.includes(array1[i])){
+    withoutNums.push(array1[i])
   }
 
 }
-return filteredNums;
+return withoutNums;
 }
 console.log(without([1, 2, 3], [1])) 
