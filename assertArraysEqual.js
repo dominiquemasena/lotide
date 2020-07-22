@@ -1,12 +1,12 @@
+function assertArraysEqual(array1, array2) {
 
-
-function assertArraysEqual(arr1, arr2) {
-  if (arr1.length === arr2.length && arr1.every((value, index) => value === arr2[index])) {
-    console.log(`✅✅✅Assertion Passed: ${arr1} === ${arr2}`);
+  if (array1.length === array2.length && array1.every((value, index) => value === array2[index])) {
+    console.log(`✅✅✅ Assertion Passed: ${array1} === ${array2}`);
   } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${arr1} !== ${arr2}`);
+    console.log(`🛑🛑🛑 Assertion Failed: ${array1} !== ${array2}`);
   }
-};
+}
 
-
-module.exports = assertArraysEqual;
+assertArraysEqual([1, 2, 3], [1, 2, 3]);
+assertArraysEqual([1, 2, 3], [3, 2, 1]);
+assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]);
