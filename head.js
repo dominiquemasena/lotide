@@ -18,25 +18,6 @@ assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // const assertEqual = require('./assertEqual');
 
 
@@ -50,6 +31,7 @@ assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
 
 
 // module.exports = head;
+
 
 
 
