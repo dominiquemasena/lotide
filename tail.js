@@ -26,26 +26,9 @@ const tail = function(array) {
 
 const array1 = [5,6,7]; 
 const array2 = tail(array1); 
-// console.log(array1);
-// console.log(array2);
 
-// console.log(isArrayEqual(array1, array2));
 assertEqual(array1, array1);
-//  assertEqual(tail([5,6,7]), [6,7]);
 
-
-// const assertEqual = require('./assertEqual');
-
-
-// const tail = function(arr) {
-//   let arguments = [];
-//   arguments = arr.slice(1);
-//   return arguments;
-// };
-
-
-
-// module.exports = tail;
 
 
 
