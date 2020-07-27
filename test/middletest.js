@@ -1,8 +1,10 @@
-const assert = require('chai').assert;
-const middle   = require('../middle');
+const assertArraysEqual = require('../assertArraysEqual');
+// const eqArrays = require('../eqArrays');
+const middle = require('../middle');
 
-describe("#middle", () => {
-  it("returns 2 for [1, 2, 3]", () => {
-    assert.strictEqual(middle([1, 2, 3]), 2);
-  });
-});
+
+// console.log("calling middle");
+const m = middle([11, 23, 36, 54, 45, 76, 97, 88]);
+// console.log("m =", m);
+assertArraysEqual(m, [54, 45]);
+
