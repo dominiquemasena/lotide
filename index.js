@@ -12,5 +12,5 @@ module.exports = {
   middle, 
   assertEqual,
   assertArraysEqual,
-  eqArrays,
+  eqArrays
 };
